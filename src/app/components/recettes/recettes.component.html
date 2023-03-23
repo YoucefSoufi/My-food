@@ -1,0 +1,27 @@
+<div class="main-recettes">
+
+    <app-search class="search" ></app-search>
+    <div class="conetu-grid">
+        <ng-container *ngIf="recettes$ | async as recettes;">
+            <mat-grid-list mat-grid-list [cols]="(colsNumber$ | async)" [gutterSize]="'10px'" rowHeight="300px">
+                <mat-grid-tile fxLayout="column" fxLayoutAlign="start start" *ngFor="let recette of recettes"
+                    class="grid-taile-resume-recette">
+                    <app-resume-recette [recette]="recette"></app-resume-recette>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </ng-container>
+
+        <ng-container *ngIf="loading || error">
+            <button (click)="reload()" *ngIf="error">Reload page </button>
+            <app-loadin [loading]="loading" [error]="error"></app-loadin>
+        </ng-container>
+
+
+        <div style="width: 100%; margin-top: 10px;" fxLayout="row" fxLayoutAlign="center center" >
+            <button *ngIf="!loading && !error" (click)="nextpage()">Next page</button>
+        </div>
+
+
+
+    </div>
+</div>

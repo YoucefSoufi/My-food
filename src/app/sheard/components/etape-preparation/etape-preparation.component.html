@@ -1,0 +1,36 @@
+<div fxLayout="column"  style="height: 100%;" fxLayoutAlign="space-around stretch">
+    <div  class="contenu-img">
+        <img [src]="etape.image" class="image" alt="{{ etape.titre }}" />
+
+    </div>
+
+
+    <div fxFlex="70">
+    <h4>{{ etape.titre }}</h4>
+    <p class="text-resume">{{ etape.resume }}</p>
+    
+    <!--<div fxLayout="row" fxLayoutAlign="center start">
+        <div fxFlex="50">
+            <h3>Ingredients :</h3>
+            <ul>
+                <li *ngFor="let ingredient of etape.ingredients">{{ ingredient }}</li>
+            </ul>
+        </div>
+        <div fxFlex="50">
+            <h3>Ustensiles :</h3>
+            <ul>
+                <li *ngFor="let ustensile of etape.ustensiles">{{ ustensile }}</li>
+            </ul>
+        </div>
+    
+    </div>-->
+    
+    <p>Durée : {{ etape.duree }} minutes</p>
+
+
+        <h4>Consceil : </h4>
+        <p class="text-resume">Ceci est le conseil du siècle si vous trouvé meilleur je vous rembourse le budget de la retraite a 65ans</p>
+    </div>
+
+
+</div>

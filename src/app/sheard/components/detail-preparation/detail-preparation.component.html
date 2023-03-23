@@ -1,0 +1,46 @@
+<div class="detail-preparation-main">
+
+    <div class="img-div">
+        <img src="https://picsum.photos/1200/{{1200 + recette.id}}" alt="" class="img-contenu">
+    </div>
+
+    <h1>{{ recette.titre }}</h1>
+    <p class="text-resume">{{ recette.resume }}</p>
+    <p>Nombre étapes : {{ recette.nombreEtapePreparation }}</p>
+    <p>Durée de préparation : {{ recette.duree }} minutes</p>
+
+    <div fxLayout="row" fxLayoutAlign="center start">
+        <div fxFlex="50">
+            <h3>Ingredients :</h3>
+            <ul>
+                <li *ngFor="let ingredient of recette.ingredients">{{ ingredient }}</li>
+            </ul>
+        </div>
+        <div fxFlex="50">
+            <h3>Ustensiles :</h3>
+            <ul>
+                <li *ngFor="let ustensile of recette.ustensiles">{{ ustensile }}</li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <div fxLayout="row" fxLayoutAlign="center start">
+        <div fxFlex="50">
+            <h3>Allergenes :</h3>
+            <ul>
+                <li *ngFor="let allergene of recette.allergenes">{{ allergene }}</li>
+            </ul>
+
+        </div>
+        <div fxFlex="50">
+            <div *ngFor="let tag of tagsCorrespondant$ | async ">
+                <app-tag [tag]="tag"></app-tag>
+            </div>
+        </div>
+
+    </div>
+
+    <p>Indice calorique : {{ recette.indiceCalorique }}</p>
+</div>

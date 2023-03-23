@@ -1,0 +1,36 @@
+.img-div {
+    width: auto;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.img-contenu {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.detail-preparation-main {
+    width: 100%;
+    height: 100%;
+}
+
+.text-resume {
+    text-align: justify;
+}
+
+p {
+  margin: 8px 0px;  
+}
+
+h1 {
+    margin: 10px 0px;
+}
+
+h3 {
+    margin: 10px 0px;
+    margin-top: 0px;
+}

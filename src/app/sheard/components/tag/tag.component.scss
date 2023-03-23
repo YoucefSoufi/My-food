@@ -1,0 +1,29 @@
+button {
+    border: none;
+    height: 30px;
+    border-radius: 20%;
+    color: white;
+    font-style: bold;
+    position: relative;
+}
+
+.close-icon {
+
+    width: 10px;
+    height: 10px;
+    font-size: 10px;
+}
+
+.cercle {
+    border-radius: 100%;
+    width: 13px;
+    height: 13px;
+    background-color: red;
+    position: absolute;
+    top: 0%;
+    right: -2%;
+}
+
+.close-button {
+  //  position: relative;
+}

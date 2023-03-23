@@ -1,0 +1,17 @@
+
+<div class="navigation-menu">
+
+
+<div fxLayout="row" fxLayoutAlign="center center" >
+        <h4>Hello! </h4>
+</div>
+
+
+<mat-divider></mat-divider>
+
+<button mat-button class="menu-button" *ngFor="let nav of navigation" (click)="navigationLien(nav.lien)">
+        <mat-icon>{{nav.icon}}</mat-icon>
+        <span>{{nav.titre}}</span>
+</button>
+
+</div>

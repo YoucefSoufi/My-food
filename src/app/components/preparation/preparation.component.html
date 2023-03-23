@@ -1,0 +1,28 @@
+<div class="preparation-page" fxLayout="row" fxLayoutAlign="center start">
+    <div class="preparation-contenu">
+        <ng-container *ngIf="loading || error">
+                <app-loadin [loading]="loading" [error]="error"></app-loadin>
+        </ng-container>
+
+        <ng-container *ngIf="recette$ | async as recette">
+            <div fxLayout="column" fxLayoutAlign="space-around stretch">
+                <app-detail-preparation *ngIf="!startPreparation" [recette]="recette"></app-detail-preparation>
+                <button style="position: fixed; bottom: 0; right: 0;" *ngIf="!startPreparation" class="go-preparation-button" (click)="startPreparation=true">
+                    Go 
+                </button>
+                <div class="etapes" fxFill *ngIf="startPreparation">
+                    <mat-horizontal-stepper class="mon-style" fxFill>
+                        <mat-step class="mon-style" *ngFor="let etape of recette.etapes; let i = index"
+                            [completed]="i < currentStep">
+                            <app-etape-preparation [etape]="etape"></app-etape-preparation>
+                            <div fxLayout="row" fxLayoutGap="2px" fxLayoutAlign="center space-around">
+                                <button class="go-preparation-button" *ngIf="i != 0" style="position: fixed; bottom: 0; left: 0;" matStepperPrevious><mat-icon>navigate_before</mat-icon></button>
+                                <button class="go-preparation-button" *ngIf="i != recette.etapes.length - 1" style="position: fixed; bottom: 0; right: 0;" matStepperNext><mat-icon>navigate_next</mat-icon></button>
+                            </div>
+                        </mat-step>
+                    </mat-horizontal-stepper>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

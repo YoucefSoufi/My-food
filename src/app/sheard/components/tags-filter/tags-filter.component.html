@@ -1,0 +1,5 @@
+<div fxLayout="row" fxLayoutGap="2px" fxLayoutAlign="start center" class="scrollable-container" (wheel)="onWheel($event)">
+<ng-container *ngFor="let tag of tags$ | async; let i = index">
+    <app-tag (selected)="selectTag($event)" [tag]="tag" [selectable]="true" class="scrollable-content"></app-tag>
+</ng-container>
+</div>

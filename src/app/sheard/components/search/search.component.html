@@ -1,0 +1,16 @@
+<div class="position {{searchWidth}}" fxLayout="row" fxLayoutAlign="end ">
+
+    <div fxLayout="column" class="{{searchWidth}} ">
+        <app-tags-filter class="filtre {{inputClass}} "></app-tags-filter>
+        <input class="input-search {{inputClass}} " type="text" #search>
+        <div fxLayout="row" fxLayoutAlign="end ">
+            <button (click)="searchClick()" class="search-button">
+                <mat-icon>search</mat-icon>
+            </button>
+        </div>
+    </div>
+
+</div>
+<button *ngIf="showbackground" class="{{background}} background-button " (click)="hideBackground()">
+
+</button>

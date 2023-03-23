@@ -1,0 +1,30 @@
+.spinner {
+    /* Add your spinner CSS styles here */
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.error-message {}
+
+.error-message img {
+    /* Add your image CSS styles here */
+    width: 64px;
+    height: 64px;
+}
+
+.error-message p {}
+
+.page-reload-error {
+    margin-top: 50px;
+}

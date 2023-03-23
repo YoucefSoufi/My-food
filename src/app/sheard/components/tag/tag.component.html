@@ -1,0 +1,7 @@
+<button fxLayout="row" fxLayoutAlign="start center" class="close-button" [ngStyle]="{'background-color': tag.color}" (click)="tagClick(tag.nom)">
+     {{ tag.nom }}
+     <div class="cercle" *ngIf="selectable && select">
+          <mat-icon class="close-icon">close</mat-icon>
+     </div>
+
+</button>
