@@ -10,6 +10,9 @@ export class ScrollService {
   seuilbottom : number = 50;
 
   directionScroll(previousScrollPosition: number, currentScrollPosition: number): string {
+    if (currentScrollPosition < 0.000034){
+      return 'top';
+    }
     return  currentScrollPosition > previousScrollPosition ? 'down' : 'up';
   }
 

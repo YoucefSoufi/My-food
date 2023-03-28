@@ -25,8 +25,9 @@ export class AppComponent {
 
   private previousScrollPosition = 0;
 
-  toolBarClass: string = 'up';
+  toolBarClass: string = '';
   contenuClass: string = 'up-conetenu'; 
+  topContainer: string = '';
 
   constructor(private scrollService: ScrollService) {
 
@@ -37,16 +38,17 @@ export class AppComponent {
   
 
   toggleDrawer() {
+    console.log("Click");
+    
     this.drawer.toggle();
   }
   
-  @HostListener('scroll', ['$event'])
-  onScroll() {    
-    console.log("app comp");
-    
+  @HostListener('window:scroll', ['$event']) 
+  onScroll(event : Event) {    
     this.toolBarClass = this.scrollService.directionScroll(this.previousScrollPosition, window.scrollY);
     this.contenuClass = this.toolBarClass == 'up' ? 'up-conetenu' : 'down-conetenu'
-    this.previousScrollPosition = window.scrollY;    
+    this.topContainer = this.toolBarClass === 'top' ? 'top-container' : '';
+    this.previousScrollPosition = window.scrollY;
   }
 
   ngOnDestroy() {
