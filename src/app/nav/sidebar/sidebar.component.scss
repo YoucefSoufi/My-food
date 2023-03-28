@@ -22,5 +22,13 @@ h4 {
 }
 
 .navigation-menu {
-    height: 100%;
+
+}
+
+.background {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 255, 255, 0.055);
+    position: absolute;
+    top: 0;
 }

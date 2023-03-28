@@ -1,8 +1,10 @@
 import { CdkScrollable, ScrollingModule } from '@angular/cdk/scrolling';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { MatNativeDateModule } from '@angular/material/core';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -13,6 +15,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from 'src/material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PlanningComponent } from './components/planning/planning.component';
@@ -25,10 +28,10 @@ import { DetailPreparationComponent } from './sheard/components/detail-preparati
 import { EtapePreparationComponent } from './sheard/components/etape-preparation/etape-preparation.component';
 import { LoadinComponent } from './sheard/components/loadin/loadin.component';
 import { ResumeRecetteComponent } from './sheard/components/resume-recette/resume-recette.component';
-import { TagsFilterComponent } from './sheard/components/tags-filter/tags-filter.component';
-import { TagComponent } from './sheard/components/tag/tag.component';
-import { SearchComponent } from './sheard/components/search/search.component';
 import { SearchTagFiltreComponent } from './sheard/components/search-tag-filtre/search-tag-filtre.component';
+import { SearchComponent } from './sheard/components/search/search.component';
+import { TagComponent } from './sheard/components/tag/tag.component';
+import { TagsFilterComponent } from './sheard/components/tags-filter/tags-filter.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +66,16 @@ import { SearchTagFiltreComponent } from './sheard/components/search-tag-filtre/
     MatSelectModule,
     MatFormFieldModule,  
     FormsModule,
-    MatStepperModule
+    MatStepperModule,
+    ReactiveFormsModule,
+    MatNativeDateModule,
+    BrowserAnimationsModule,
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
+    MaterialModule
   ],
   providers: [CdkScrollable],
   bootstrap: [AppComponent]

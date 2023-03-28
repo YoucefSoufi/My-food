@@ -1,13 +1,16 @@
-<mat-drawer-container class="container" >
-  <mat-drawer [mode]="'over'" [disableClose]="false" [opened]="false">
-    <app-sidebar (toggle)="toggleDrawer()"></app-sidebar>
+<mat-drawer-container [hasBackdrop]="true">
+  <mat-drawer #drawer [mode]="'over'" [disableClose]="false" [opened]="false">
+    <app-sidebar></app-sidebar>
   </mat-drawer>
-  <mat-drawer-content (scroll)="onScroll()"  >
-    <mat-toolbar  class="fixed-toolbar {{toolBarClass}}">
-      <app-navbar class="navbar" (toggle)="toggleDrawer()"></app-navbar>
-    </mat-toolbar>
-    <div class="contenu {{contenuClass}}" >
-        <router-outlet ></router-outlet>
+  <mat-drawer-content class=" transition {{topContainer}}">
+    <div class="abs">
+      <mat-toolbar class="toolbar {{toolBarClass}}">
+        <app-navbar class="mat-toolbar mat-toolbar-single-row" (toggle)="toggleDrawer()"></app-navbar>
+      </mat-toolbar>
     </div>
+    <div class=" transition {{topContainer}}">
+      <router-outlet></router-outlet>
+    </div>
+
   </mat-drawer-content>
 </mat-drawer-container>
