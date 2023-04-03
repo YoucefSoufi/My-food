@@ -1,1 +1,48 @@
-<app-tags-filter></app-tags-filter>
+<!-- <div style=" height: 100%;">
+
+    <mat-grid-list mat-grid-list [cols]="(colsNumber$ | async)" [gutterSize]="'0px'" rowHeight="145px" >
+
+        <mat-grid-tile class="grid-taile-resume-recette" *ngFor="let recette of recettes" class="{{ recette.class }}"
+        class="example-list"   >
+
+            <div 
+                style="height: 125px; width: 100%; background-color: yellowgreen; color: brown;" cdkDrag 
+                cdkDragLockAxis="x"  (cdkDragEnded)="drop($event,recette)" (cdkDragMoved)="dragMoved($event,recette)">{{
+                recette.class }}</div>
+
+
+        </mat-grid-tile>
+
+
+    </mat-grid-list>
+
+    <div *ngFor="let recette of recettes">
+
+
+
+    </div>
+
+</div> -->
+
+<div style=" height: 100%;">
+
+    <div >
+
+        <div  *ngFor="let recette of recettes" 
+           >
+
+            <div class="{{ recette.class }}"
+                style="height: 125px; width: 100%; background-color: yellowgreen; color: brown;     transition: translateX 2s;" cdkDrag 
+                cdkDragLockAxis="x"  (cdkDragEnded)="drop($event,recette)" (cdkDragMoved)="dragMoved($event,recette)">{{
+                recette.class }}</div>
+
+
+        </div>
+
+
+    </div>
+
+    <button (click)="transition(recettes[0])">Click</button> 
+    {{ recettes[0].class }}
+
+</div> 

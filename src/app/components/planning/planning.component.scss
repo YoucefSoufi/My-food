@@ -1,0 +1,60 @@
+.contenu-img {
+    box-sizing: inherit;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.image {
+    width: 100%;
+    height: auto;
+}
+
+.example-list {
+    max-width: 100%;
+    min-height: 60px;
+    display: block;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.example-box {
+    border-bottom: solid 1px #ccc;
+    color: rgba(0, 0, 0, 0.87);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    cursor: move;
+    background: white;
+    font-size: 14px;
+}
+
+.cdk-drag-preview {}
+
+.cdk-drag-placeholder {
+    opacity: 0;
+}
+
+.cdk-drag-animating {
+ // transition: transform 2s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.example-box:last-child {
+    border: none;
+}
+
+.showOptions {
+    transform: translateX(-50%);
+}
+
+.animated .deleteOption {
+    transform: translateX(-200%);
+}
+
+.transitionOption {
+    transition: translateX 2s;
+}

@@ -21,10 +21,19 @@
             </div>
             <div fxFlex="50" fxLayout="row" fxLayoutAlign="start center" class="resume-detail">
                 <div fxFlex="20" fxLayout="row" fxLayoutAlign="start center">{{recette.duree}} minutes</div>
-                <div fxFlex="80" fxLayout="row" fxLayoutAlign="start center">
+                <div fxFlex="60" fxLayout="row" fxLayoutAlign="start center">
                     <ng-container *ngFor="let tag of tagsCorrespondant$ | async">
                         <app-tag [tag]="tag"></app-tag>
                     </ng-container>
+                </div>
+                <div fxFlex>
+                    <button *ngIf="!isPlanned" (click)="addRecette(recette,$event)">
+                        <mat-icon>date_range</mat-icon>
+                    </button>
+                    <button *ngIf="isPlanned" (click)="deleteRecette(recette,$event)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+
                 </div>
             </div>
 

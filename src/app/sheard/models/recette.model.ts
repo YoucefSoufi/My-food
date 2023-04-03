@@ -13,6 +13,7 @@ export interface IRecette{
   indiceCalorique: number;
   etapes: Etape[];
   tags: string[];
+  class?: string;
 }
 
 export class Recette implements IRecette {
@@ -28,4 +29,6 @@ export class Recette implements IRecette {
   public resume!: string;
   public duree!: number; 
   public tags! : string[];
+  public class? : string = '';
+
 }

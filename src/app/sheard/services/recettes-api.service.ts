@@ -66,6 +66,21 @@ export class RecettesApiService {
   }
 
 
+  getRecettesById(listIdRecette: string[]): Observable<Recette[]> {
+    console.log(listIdRecette);
+
+    const random = Math.random();
+    if (random >= 0.1) {
+      return of(this.crationJeuxDonne(0)).pipe(
+        delay(0) // Delay of 2 seconds (2000 milliseconds)
+      );
+    } else {
+      return throwError('Une erreur s\'est produite lors de la récupération de la recette.');
+    }
+  }
+
+
+
   
 
   crationJeuxDonne(page: number) {
