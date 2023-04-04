@@ -32,6 +32,7 @@ import { SearchTagFiltreComponent } from './sheard/components/search-tag-filtre/
 import { SearchComponent } from './sheard/components/search/search.component';
 import { TagComponent } from './sheard/components/tag/tag.component';
 import { TagsFilterComponent } from './sheard/components/tags-filter/tags-filter.component';
+import { RecettePlanificationResumeComponent } from './sheard/components/recette-planification-resume/recette-planification-resume.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { TagsFilterComponent } from './sheard/components/tags-filter/tags-filter
     TagComponent,
     SearchComponent,
     SearchTagFiltreComponent,
+    RecettePlanificationResumeComponent,
   ],
   imports: [
     BrowserModule,

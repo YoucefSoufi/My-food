@@ -1,0 +1,23 @@
+<div class="container">
+    <div fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="space-between stretch" class="sub-container">
+        <div  style="box-sizing: inherit; height: 100%; min-height: 125.891px; aspect-ratio: 1 / 1;">
+            <div class="contenu-img">
+                <img src="https://picsum.photos/1200/{{ 1207 + recette.id }}" alt="" class="image">
+            </div>
+        </div>
+        <div fxFlex>
+            <div>{{ recette.titre }}</div>
+            <p class="text">
+                {{ recette.resume }}</p>
+            <div> {{ recette.tags }} </div>
+        </div>
+        <div fxFlex="20" fxLayout="column" fxLayoutAlign="space-around center" fxLayoutGap="5px">
+            <mat-icon style="font-size: 32px; aspect-ratio: 1 / 1; width: 32px; height: 32px;">add_circle
+            </mat-icon>
+            <div>3</div>
+            <mat-icon style="font-size: 32px; aspect-ratio: 1 / 1; width: 32px; height: 32px;">remove_circle
+            </mat-icon>
+        </div>
+
+    </div>
+</div>

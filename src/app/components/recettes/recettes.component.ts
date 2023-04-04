@@ -40,11 +40,6 @@ export class RecettesComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-
-    console.log("in?");
-
-   // window.addEventListener('scroll', this.onScroll.bind(this), true);
-
     
     this.subscription.register(this.getRecetteSubject.subscribe(() => {
 

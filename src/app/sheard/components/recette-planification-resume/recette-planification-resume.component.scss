@@ -1,0 +1,36 @@
+.container {
+    height: 10vh;
+    min-height: 125.891px;
+    max-width: 360px;
+    //min-width: 330px;
+    margin: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.185);
+}
+
+
+.sub-container {
+    min-height: 125.891px;
+    height: 100%;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+}
+
+.contenu-img {
+    box-sizing: inherit;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.text {
+    height: 50px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
